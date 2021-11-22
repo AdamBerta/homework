@@ -1,0 +1,12 @@
+.button{
+    outline: none;
+    background: none;
+    border: 2px solid black;
+    cursor: pointer;
+    &:hover{
+        background: lightblue
+    }
+    &[disabled]{
+        background:red;
+    }
+}
