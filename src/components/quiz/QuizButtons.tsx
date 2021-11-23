@@ -1,5 +1,6 @@
 import { useAppDispatch } from "../../hooks/hooks";
 import { questionsActions } from "../../store/questions-slice";
+import classes from './QuizButtons.module.scss';
 import Button from "../UI/Button";
 
 const QuizButtons:React.FC = () => {
@@ -9,7 +10,7 @@ const QuizButtons:React.FC = () => {
     };
 
     return (
-        <div>
+        <div className={classes.QuizButtons}>
             <Button disabled={false} onClickHandler={quizButtonClickHandler.bind(this, "True")}>True</Button>
             <Button disabled={false} onClickHandler={quizButtonClickHandler.bind(this, "False")}>False</Button>
         </div>

@@ -1,0 +1,23 @@
+.QuizButtons {
+  button {
+    width: 150px;
+    &:first-child {
+      right: initial;
+      left: calc(50% - 10px);
+      transform: translateX(calc(-100%));
+    }
+    &:last-child {
+      left: initial;
+      right: calc(50% - 10px);
+      transform: translateX(calc(100%));
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .QuizButtons {
+    button {
+      width: 120px;
+    }
+  }
+}

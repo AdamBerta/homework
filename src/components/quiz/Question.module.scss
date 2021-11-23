@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.questionText{
+    font-size: 1.2rem;
+    line-height: 140%;
+    padding: 50px 10px;
+    border: 1px solid $baseFontColor;
+    border-radius: 15px;
+    margin: 0 0 20px
+}
+
+.numbers{
+    font-size: 1.5rem;
+    font-weight: 600;
+}

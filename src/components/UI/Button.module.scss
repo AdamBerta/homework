@@ -1,12 +1,37 @@
-.button{
+@import '../../styles/variables.scss';
+
+.btn{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     outline: none;
-    background: green;
-    border: 5px solid black;
+    border: none;
+    appearance: none;
     cursor: pointer;
+    @include gradientBg($darkblue, $purple);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: $buttonColor;
+    -webkit-box-shadow: 5px 3px 18px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 5px 3px 18px 5px rgba(0,0,0,0.3);
+    box-shadow: 5px 3px 18px 5px rgba(0,0,0,0.3);
     &:hover{
-        background: lightblue
+        background: $buttonBackgroundHover;
     }
     &[disabled]{
-        background:red;
+        color: $buttonColorDisabled;
+        background: $buttonBackgroundDisabled;
+        cursor: wait;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .btn{
+        bottom: 30px;
     }
 }

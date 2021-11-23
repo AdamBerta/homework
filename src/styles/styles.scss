@@ -1,0 +1,68 @@
+@import "../styles/variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 20px;
+}
+
+body {
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  color: $baseFontColor;
+  margin: 0 auto;
+  line-height: 120%;
+  @include gradientBg($darkblue, $purple);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.game {
+  position: relative;
+  min-width: 30vw;
+  min-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $gameBackground;
+  padding: 50px 50px 110px;
+  margin: 0px 15px;
+  border-radius: 25px;
+  -webkit-box-shadow: 5px 3px 18px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 3px 18px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 3px 18px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  html {
+    font-size: 18px;
+  }
+  .game {
+    min-width: 60vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 17px;
+  }
+  .game {
+    min-width: 80vw;
+    padding: 100px 10px 85px;
+  }
+}

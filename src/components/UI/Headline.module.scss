@@ -1,4 +1,17 @@
 .headline{
-    text-align: center;
-    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 0px 15px;
+    font-size: 1.2rem;
+    line-height: 120%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px){
+    .headline{
+        top: 20px;
+    }
 }

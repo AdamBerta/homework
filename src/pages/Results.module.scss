@@ -1,0 +1,36 @@
+@import '../styles/variables.scss';
+
+.list {
+  list-style: none;
+  text-align: left;
+  line-height: 100%;
+  margin: 70px 0 0;
+  padding-right: 10px;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+.list-item {
+    margin: 10px 0;
+  &:before{
+      font-size: 1.4rem;
+      font-weight: 600;
+  }
+}
+.answer-correct {
+  color: $correctColor;
+  &:before {
+    content: "+ ";
+  }
+}
+.answer-incorrect {
+  color: $incorrectColor;
+  &:before {
+    content: "- ";
+  }
+}
+
+@media screen and (max-width: 768px){
+    .list{
+        margin: 0;
+    }
+}
